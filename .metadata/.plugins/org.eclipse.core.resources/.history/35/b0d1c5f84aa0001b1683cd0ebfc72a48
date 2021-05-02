@@ -1,0 +1,17 @@
+package shiwakoti.ishu;
+
+public class NormalMovie extends Movie{
+	
+	int seats = 48;
+	
+	public NormalMovie() {
+		
+	}
+	
+	public NormalMovie(String name, int price) {
+		super.name = name;
+		super.price = price;
+		
+	}
+
+}

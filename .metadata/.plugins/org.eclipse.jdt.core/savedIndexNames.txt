@@ -1,0 +1,10 @@
+INDEX VERSION 1.131+/home/alpha/AProgramming/.metadata/.plugins/org.eclipse.jdt.core
+3575459439.index
+2554534045.index
+1740899301.index
+3781246286.index
+3023931277.index
+543786356.index
+1061899563.index
+646308833.index
+3092507242.index

@@ -1,0 +1,26 @@
+package shiwakoti.ishu;
+
+import java.util.*;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Scanner intScanner = new Scanner(System.in);
+		Scanner strScanner = new Scanner(System.in);
+		String user;
+		List<NormalMovie> listNormal = new ArrayList<NormalMovie>();
+		List<SpecialMovie> listSpecial = new ArrayList<SpecialMovie>();
+		do {
+			System.out.println("Type exit to exit");
+			System.out.print("Enter your name : ");
+			user = strScanner.next();
+		
+			if (user.equals("admin")) {
+				System.out.println("Add a normal movie : ");
+				
+			}
+		
+		}while(!user.equals("exit"));
+	}
+
+}

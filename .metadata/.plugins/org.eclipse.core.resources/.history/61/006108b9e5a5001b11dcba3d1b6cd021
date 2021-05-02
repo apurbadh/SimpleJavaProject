@@ -1,0 +1,63 @@
+package np.edu.deerwalk;
+
+import java.util.Scanner;
+
+public class MainClass {
+	static Breakfast breakfast;
+	static Dessert dessert;
+	static Drinks drinks;
+	static Lunch lunch;
+	static Snacks snacks;
+
+	public static void main(String[] args) {
+		
+		Scanner intScanner = new Scanner(System.in);
+		int people, budget, choice = 0;
+		
+		do {
+			System.out.print("Enter number of people : ");
+			people = intScanner.nextInt();
+			budget = intScanner.nextInt();
+			
+			breakfast = new Breakfast(people, budget);
+			dessert = new Dessert(people, budget);
+			drinks = new Drinks(people, budget);
+			lunch = new Lunch(people, budget);
+			snacks = new Snacks(people, budget);
+			
+		}while(choice != 0);
+		
+
+	}
+	
+	public void showBreakfast() {
+		breakfast.checkmenu();
+	}
+	
+	void showDessert() {
+		dessert.checkmenu();
+	}
+	
+	void showDrinks() {
+		drinks.checkmenu();
+	}
+	
+	void showLunch() {
+		lunch.checkmenu();
+	}
+	
+	void showSnacks() {
+		snacks.checkmenu();
+	}
+	
+	void showAll() {
+		showBreakfast();
+		showDessert();
+		showDrinks();
+		showLunch();
+		showSnacks();
+	}
+	
+
+
+}

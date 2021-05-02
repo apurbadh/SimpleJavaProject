@@ -1,0 +1,18 @@
+package np.edu.deerwalk;
+
+public class Breakfast extends Food{
+	
+	void checkmenu() {
+		if ((people<1)&&(budget<500)){
+            System.out.println("");
+            System.out.println("");
+        }
+        else if ((people<2)&&(budget<1000)){
+            System.out.println("");
+
+        }else if ((people<=6)&&(budget<1500)){
+            System.out.println("");
+        }
+	}
+
+}

@@ -1,0 +1,105 @@
+package np.edu.deerwalk;
+
+import java.util.Scanner;
+
+public class MainClass {
+	static Breakfast breakfast;
+	static Dessert dessert;
+	static Drinks drinks;
+	static Lunch lunch;
+	static Snacks snacks;
+
+	public static void main(String[] args) {
+		
+		Scanner intScanner = new Scanner(System.in);
+		int people, budget, choice = 0;
+		
+		do {
+			System.out.print("Enter number of people : ");
+			people = intScanner.nextInt();
+			budget = intScanner.nextInt();
+			
+			breakfast = new Breakfast(people, budget);
+			dessert = new Dessert(people, budget);
+			drinks = new Drinks(people, budget);
+			lunch = new Lunch(people, budget);
+			snacks = new Snacks(people, budget);
+			
+			System.out.println("********");
+            System.out.println("SELECT MENU:");
+            System.out.println("1 For vewing Breakfast:");
+            System.out.println("2 For vewing Lunch:");
+            System.out.println("3 For vewing Snacks:");
+            System.out.println("4 For vewing Dessert:");
+            System.out.println("5 For vewing Drinks:");
+            System.out.println("6 For vewing Full Menu:");
+            System.out.println("0 Exit:");
+			System.out.println("********");
+			
+			System.out.print("Enter the choice : ");
+			choice = intScanner.nextInt();
+			
+			switch (choice) {
+			case 0:
+				break;
+			case 1:
+				showBreakfast();
+				break;
+			case 2:
+				showLunch();
+				break;
+			case 3:
+				showSnacks();
+				break;
+			case 4:
+				showDessert();
+				break;
+			case 5:
+				showDrinks();
+				break;
+			case 6:
+				showAll();
+				break;
+			default:
+				System.out.println("Not found !");
+				
+			}		
+			
+		}while(choice != 0);
+		
+		intScanner.close();
+		
+
+	}
+	
+	public static void showBreakfast() {
+		breakfast.checkmenu();
+	}
+	
+	static void showDessert() {
+		dessert.checkmenu();
+	}
+	
+	static void showDrinks() {
+		drinks.checkmenu();
+	}
+	
+	static void showLunch() {
+		lunch.checkmenu();
+	}
+	
+	static void showSnacks() {
+		snacks.checkmenu();
+	}
+	
+	static void showAll() {
+		showBreakfast();
+		showDessert();
+		showDrinks();
+		showLunch();
+		showSnacks();
+	}
+	
+
+
+}

@@ -1,0 +1,9 @@
+package np.edu.deerwalk;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

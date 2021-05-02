@@ -1,0 +1,20 @@
+package np.edu.deerwalk;
+
+import java.util.*;
+
+abstract class User {
+	protected String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setData() {
+		Scanner strScanner = new Scanner(System.in);
+		System.out.print("Enter your name : ");
+		this.name = strScanner.next();
+		strScanner.close();
+		
+	}
+	
+}

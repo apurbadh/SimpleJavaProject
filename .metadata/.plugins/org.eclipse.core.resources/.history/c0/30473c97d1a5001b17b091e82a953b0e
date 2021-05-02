@@ -1,0 +1,8 @@
+package np.edu.deerwalk;
+
+public class NationalPlane extends Planes{
+	
+	
+	
+
+}

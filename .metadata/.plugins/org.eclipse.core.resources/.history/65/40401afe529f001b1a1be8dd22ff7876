@@ -1,0 +1,71 @@
+package np.edu.deerwalk;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		List<User> list = new ArrayList<User>();
+
+		System.out.println("Are you a admin or user ? ");
+		System.out.println("1. User");
+		System.out.println("2. Admin");
+		
+		Scanner intScanner = new Scanner(System.in);
+		Scanner strScanner = new Scanner(System.in);
+		
+		System.out.print(">> ");
+		int type = intScanner.nextInt();
+		
+		if (type == 1) 
+		{
+			NormalUser user = new NormalUser();
+			user.setData();
+			do {
+				System.out.println("1. Present");
+				System.out.println("2. Absent");
+				System.out.println("3. About you");
+				System.out.println("4. Exit");
+				
+				System.out.print(">> ");
+				type = intScanner.nextInt();
+				
+				switch (type) {
+				case 1:
+					user.setAttendance(true);
+					break;
+				case 2:
+					user.setAttendance(false);
+					break;
+				case 3:
+					user.getData();
+					break;
+				case 4:
+					break;
+				default:
+					System.out.println("Not found");
+					break; 
+						
+				}
+				
+			}while(type != 4);
+			list.add(user);
+		}else if (type == 2)
+		{
+			Admin user = new Admin();
+			user.setData();
+		}else {
+			System.out.println("Not found !");
+		}
+		intScanner.close();
+		strScanner.close();
+		
+		
+		
+		
+	}
+
+}

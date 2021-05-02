@@ -1,0 +1,20 @@
+package np.edu.deerwalk;
+
+import java.util.Scanner;
+
+public class NormalUser extends User{
+	private int roll_no;
+	
+	public int getRollNo() {
+		return this.roll_no;
+	} 
+	
+	@Override
+	public void setData() {
+		super.setData();
+		Scanner intScanner = new Scanner(System.in);
+		this.roll_no = intScanner.nextInt();
+		intScanner.close();
+	}
+	
+}

@@ -1,0 +1,39 @@
+package np.edu.deerwalk;
+
+public class Dessert extends Food{
+	
+	void checkmenu() {
+        if ((people < 1) && (budget <= 700)) {
+            System.out.println("Assorted pastries");
+            System.out.println("Rice Pudding");
+            System.out.println("Bread pudding");
+            System.out.println("Carrot Cake");
+            System.out.println("Apple Pie");
+            System.out.println("Almond Malai Kulfi");
+            System.out.println("Lemon Tart");
+            System.out.println("Eggless Chocolate Mousse");
+            System.out.println("Jeri");
+
+        } else if ((people < 2) && (budget < 1500)) {
+            System.out.println("Pistachio Phirni");
+            System.out.println("Fudgy Chewy Brownies");
+            System.out.println("Coconut Kheer");
+            System.out.println("Chocolate Coffee Truffle");
+            System.out.println("Hot Cointreau Souffle");
+            System.out.println("Gulab Jamun ");
+            System.out.println("Wine cake");
+            System.out.println("Baked Yogurt");
+
+        } else if ((people < 5) && (budget <= 2500)) {
+            System.out.println("King cake");
+            System.out.println("Pastiera");
+            System.out.println("Cake pop");
+            System.out.println("Coffee cake");
+            System.out.println("Pan cake combo");
+            System.out.println("Marshmallow Cake");
+            System.out.println("Red Velvet Cake");
+            System.out.println("Milk N' Cookies Icebox Cake");
+        }
+	}
+
+}
